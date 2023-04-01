@@ -7,6 +7,7 @@
 		"eslint:recommended",
 		"airbnb/hooks",
 		"airbnb-typescript",
+		"preact",
 		"plugin:vitest/recommended",
 		"plugin:react/recommended",
 		"plugin:react/jsx-runtime",
@@ -17,39 +18,25 @@
 	],
 	"parser": "@typescript-eslint/parser",
 	"parserOptions": {
-		"ecmaFeatures": {
-			"jsx": true
-		},
-		"ecmaVersion": "latest",
 		"sourceType": "module",
-		"tsconfigRootDir": ".",
-		"project": ["./tsconfig.json"]
+		"project": "./tsconfig.json"
 	},
-	"plugins": ["vitest", "preact", "@typescript-eslint"],
+	"plugins": ["vitest", "@typescript-eslint"],
 	"settings": {
 		"import/resolver": {
 			"typescript": {
 				"project": "./tsconfig.json"
+			},
+			"alias": {
+				"extensions": [".js", ".jsx", ".ts", ".tsx"]
 			}
-		},
-		"react": {
-			"version": "18.x"
 		}
 	},
+	"ignorePatterns": ["vite.config.ts"],
 	"rules": {
+		"jest/no-deprecated-functions": ["off"],
 		"linebreak-style": "off",
-		"prettier/prettier": [
-			"error",
-			{
-				"printWidth": 80,
-				"endOfLine": "lf",
-				"singleQuote": true,
-				"tabWidth": 2,
-				"indentStyle": "space",
-				"useTabs": true,
-				"trailingComma": "es5"
-			}
-		],
+		"prettier/prettier": ["error"],
 		"@typescript-eslint/no-explicit-any": "warn",
 		"@typescript-eslint/ban-types": [
 			"error",
