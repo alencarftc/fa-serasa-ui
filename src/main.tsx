@@ -1,5 +1,5 @@
-import { render } from 'preact';
 import { App } from './app';
+import { render } from 'react-dom';
 
 import './index.scss';
 
