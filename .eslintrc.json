@@ -7,7 +7,6 @@
 		"eslint:recommended",
 		"airbnb/hooks",
 		"airbnb-typescript",
-		"preact",
 		"plugin:vitest/recommended",
 		"plugin:react/recommended",
 		"plugin:react/jsx-runtime",
@@ -34,7 +33,8 @@
 	},
 	"ignorePatterns": ["vite.config.ts"],
 	"rules": {
-		"jest/no-deprecated-functions": ["off"],
+		"import/no-unresolved": ["off"],
+		"react/prop-types": ["off"],
 		"linebreak-style": "off",
 		"prettier/prettier": ["error"],
 		"@typescript-eslint/no-explicit-any": "warn",

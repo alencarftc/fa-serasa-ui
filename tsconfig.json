@@ -15,17 +15,14 @@
 		"isolatedModules": true,
 		"noEmit": true,
 		"jsx": "react-jsx",
-		"jsxImportSource": "preact",
-		"types": ["preact", "vitest/globals"],
+		"types": ["vitest/globals"],
 		"plugins": [{ "name": "typescript-plugin-css-modules" }],
 		"paths": {
-			"react": ["./node_modules/preact/compat/*"],
-			"react-dom": ["./node_modules/preact/compat/*"],
 			"@public/*": ["./public/*"],
 			"@components/*": ["./src/components/*"]
 		}
 	},
 	"include": ["src"],
-	"typeRoots": ["./types", "node_modules/@types"],
+	"typeRoots": ["node_modules/@types"],
 	"references": [{ "path": "./tsconfig.node.json" }]
 }

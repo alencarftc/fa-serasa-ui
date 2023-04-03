@@ -1,8 +1,8 @@
-import { useState } from 'preact/hooks';
 import preactLogo from './assets/images/preact.svg';
 import viteLogo from './assets/images/vite.svg';
 
 import classes from './app.module.scss';
+import { useState } from 'react';
 
 export function App() {
 	const [count, setCount] = useState(0);
@@ -16,12 +16,12 @@ export function App() {
 				<a href="https://preactjs.com" target="_blank" rel="noreferrer">
 					<img
 						src={preactLogo}
-						className={`${classes.logo} ${classes.preact}`}
+						className={`${classes.logo} ${classes.react}`}
 						alt="Preact logo"
 					/>
 				</a>
 			</div>
-			<h1>Vite + Preact</h1>
+			<h1>Vite + React</h1>
 			<div className={classes.card}>
 				<button onClick={() => setCount((_count) => _count + 1)}>
 					count is {count}
@@ -31,7 +31,7 @@ export function App() {
 				</p>
 			</div>
 			<p className={classes['read-the-docs']}>
-				Click on the Vite and Preact logos to learn more
+				Click on the Vite and React logos to learn more
 			</p>
 		</>
 	);

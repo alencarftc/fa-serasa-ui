@@ -8,6 +8,7 @@ pnpm-debug.log*
 lerna-debug.log*
 .tests/coverage
 
+.vite
 .eslintcache
 node_modules
 dist
