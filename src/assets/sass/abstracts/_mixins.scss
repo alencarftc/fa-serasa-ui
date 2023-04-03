@@ -1,0 +1,32 @@
+@use '@sass/abstracts/breakpoints' as bk;
+
+@mixin font-config($fs-map, $fs-breakpoints: bk.$breakpoints) {
+	@each $fs-breakpoint, $fs-font-config in $fs-map {
+		@if $fs-breakpoint == null {
+			@include make-font-config($fs-font-config);
+		} @else {
+			// If $fs-font-config is a key that exists in
+			// $fs-breakpoints, use the value
+			@if map-has-key($fs-breakpoints, $fs-breakpoint) {
+				$fs-breakpoint: map-get($fs-breakpoints, $fs-breakpoint);
+			}
+			@media screen and (min-width: $fs-breakpoint) {
+				@include make-font-config($fs-font-config);
+			}
+		}
+	}
+}
+
+// Utility function for mixin font configuration
+@mixin make-font-config($fs-font-config) {
+	font-size: nth($fs-font-config, 1);
+	@if ( length($fs-font-config) > 1 ) {
+		line-height: nth($fs-font-config, 2)
+	}
+	@if ( length($fs-font-config) > 2 ) {
+		font-weight: nth($fs-font-config, 3);
+	}
+	@if ( length($fs-font-config) > 3 ) {
+		letter-spacing: nth($fs-font-config, 4);
+	}
+}
