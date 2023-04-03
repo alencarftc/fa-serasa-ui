@@ -1,0 +1,35 @@
+@use "@sass/abstracts/mixins" as mx;
+
+$font-configs: (
+	h1: (
+		null: (2.5rem, 44px, bold, -1.2px),
+		desktop: (3rem, 52px)
+	),
+	h2: (
+		null: (2rem, 36px, bold, -1px),
+		desktop: (2.5rem, 44px)
+	),
+	h3: (
+		null: (1.5rem, 28px, bold, -0.8px),
+		desktop: (2rem, 36px)
+	),
+	h4: (
+		null: (1.25rem, 24px, bold, -0.6px),
+		desktop: (1.5rem, 28px)
+	),
+	h5: (
+		null: (1.125rem, 22px, bold),
+		desktop: (1.5rem, 24px)
+	),
+	h6: (
+		null: (1rem, 20px, bold),
+	)
+);
+
+@each $heading, $font-config in $font-configs {
+	#{$heading} {
+ 		@include mx.font-config($font-config);
+		font-family: var(--ff-heading);
+		color: var(--color-dark-high);
+    }
+}
