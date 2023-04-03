@@ -1,13 +1,17 @@
-import { ReactElement } from 'react';
+import { ReactNode } from 'react';
 import classes from './Paragraph.module.scss';
 
 const DEFAULT_WEIGHT = 'normal';
 
-export type ParagraphChildren = ReactElement | string | undefined;
 export type ParagraphWeight = 'normal' | 'bold';
-
 interface ParapraphProps {
-	children: ParagraphChildren;
+	/**
+	 * The inner HTML content.
+	 */
+	children: ReactNode;
+	/**
+	 * The font weight value.
+	 */
 	weight?: ParagraphWeight;
 }
 const Paragraph = ({ children, weight = DEFAULT_WEIGHT }: ParapraphProps) => {
