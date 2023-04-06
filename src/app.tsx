@@ -1,4 +1,4 @@
-import Home from '@pages/Home/Home';
+import Home from '@pages/Home';
 
 import classes from './app.module.scss';
 import ModalProvider from '@helpers/providers/ModalContext';
