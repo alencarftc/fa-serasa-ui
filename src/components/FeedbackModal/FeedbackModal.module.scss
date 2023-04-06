@@ -1,0 +1,35 @@
+.modal {
+	&--default {
+		z-index: -1;
+		animation: fadeDown 750ms ease-in-out;
+	}
+
+	@each $variant in ('success', 'loading', 'error') {
+		&--#{$variant} {
+			background: var(--color-#{$variant}-light);
+			border: 2px solid var(--color-#{$variant});
+			color: var(--color-#{$variant}-text);
+			animation: fadeUp 750ms ease-in-out;
+		}
+	}
+
+	&--loading span {
+		justify-content: space-between;
+	}
+
+	span {
+		max-width: 480px;
+	}
+}
+@keyframes fadeUp {
+	0% {
+		transform: translate(-50%, calc(-50% + 80px));
+		opacity: 0;
+	}
+}
+@keyframes fadeDown {
+	0% {
+		transform: translate(-50%, -50%);
+		opacity: 1;
+	}
+}

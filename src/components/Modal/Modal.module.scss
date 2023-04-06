@@ -1,0 +1,26 @@
+@use '@sass/themes/variables' as th;
+
+.modal {
+	position: absolute;
+	top: 4%;
+	opacity: 1;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 90%;
+	text-align: center;
+	border-radius: 8px;
+	height: 92px;
+	display: flex;
+	transition: opacity 250ms ease-in-out;
+
+	span {
+		font-size: th.$theme-fs-md;
+		line-height: th.$theme-lh-md;
+		display: flex;
+		padding: 16px 8px;
+		justify-content: space-evenly;
+		width: 100%;
+		align-items: center;
+		margin: auto;
+	}
+}

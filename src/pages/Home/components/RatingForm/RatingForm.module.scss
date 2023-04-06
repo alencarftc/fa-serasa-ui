@@ -1,0 +1,9 @@
+@use '@sass/abstracts/mixins' as mx;
+
+.form {
+	display: flex;
+	flex-flow: column nowrap;
+	max-width: 400px;
+	margin: 0 auto;
+	padding-top: 24px;
+}

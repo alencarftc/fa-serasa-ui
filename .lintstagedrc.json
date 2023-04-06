@@ -1,0 +1,7 @@
+{
+  "src/**/*.{js,jsx,ts,tsx}": [
+    "yarn lint --max-warnings=0 --fix",
+    "yarn prettier:write"
+  ],
+  "src/**/*.{html,css,js,json,md,mdx}": "yarn prettier:write"
+}

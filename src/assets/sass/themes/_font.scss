@@ -1,0 +1,52 @@
+@use "@sass/themes/variables" as *;
+@use "@sass/abstracts/mixins" as mx;
+
+$theme-ff-sans: Roboto;
+$theme-ff-general: $theme-ff-sans, sans-serif;
+
+@include mx.font-face($theme-ff-sans, #{$theme-ff-sans}-Regular);
+@include mx.font-face($theme-ff-sans, #{$theme-ff-sans}-Bold, bold);
+
+$heading-font-configs: (
+	h1: (
+		null: ($theme-fs-xl, $theme-lh-xl, $theme-ls-xl),
+		desktop: ($theme-fs-xxl, $theme-lh-xxl)
+	),
+	h2: (
+		null: ($theme-fs-lg, $theme-lh-lg, $theme-ls-lg),
+		desktop: ($theme-fs-xl, $theme-lh-xl)
+	),
+	h3: (
+		null: ($theme-fs-md, $theme-lh-md, $theme-ls-md),
+		desktop: ($theme-fs-lg, $theme-lh-lg)
+	),
+	h4: (
+		null: ($theme-fs-sm, $theme-lh-sm, $theme-ls-sm),
+		desktop: ($theme-fs-md, $theme-lh-md)
+	),
+	h5: (
+		null: ($theme-fs-xs, $theme-lh-xs),
+		desktop: ($theme-fs-md, $theme-lh-sm)
+	),
+	h6: (
+		null: ($theme-fs-xxs, $theme-lh-xxs),
+	)
+);
+$text-font-configs: (
+    null: ($theme-fs-xxs, 24px),
+);
+
+p, span, label, input, textarea {
+    @include mx.font-config($text-font-configs);
+    font-family: var(--theme-ff-text);
+    color: var(--color-text);
+}
+
+@each $heading, $font-config in $heading-font-configs {
+    #{$heading} {
+        @include mx.font-config($font-config);
+        font-family: var(--theme-ff-heading);
+        color: var(--color-heading);
+        font-weight: bold;
+    }
+}

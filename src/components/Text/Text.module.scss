@@ -1,0 +1,13 @@
+@use '@sass/abstracts/mixins' as mx;
+
+.text {
+	&--as-normal {
+		color: var(--color-text);
+	}
+	&--as-error {
+		color: var(--color-error);
+	}
+	&--as-success {
+		color: var(--color-success);
+	}
+}

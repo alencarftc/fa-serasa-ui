@@ -1,0 +1,63 @@
+{
+	"env": {
+		"browser": true,
+		"es6": true
+	},
+	"extends": [
+		"eslint:recommended",
+		"airbnb/hooks",
+		"airbnb-typescript",
+		"plugin:vitest/recommended",
+		"plugin:react/recommended",
+		"plugin:react/jsx-runtime",
+		"plugin:@typescript-eslint/recommended",
+		"plugin:@typescript-eslint/recommended-requiring-type-checking",
+		"plugin:prettier/recommended",
+		"plugin:import/recommended"
+	],
+	"parser": "@typescript-eslint/parser",
+	"parserOptions": {
+		"sourceType": "module",
+		"project": "./tsconfig.json"
+	},
+	"plugins": ["vitest", "@typescript-eslint"],
+	"settings": {
+		"import/resolver": {
+			"typescript": {
+				"project": "./tsconfig.json"
+			},
+			"alias": {
+				"extensions": [".js", ".jsx", ".ts", ".tsx"]
+			}
+		}
+	},
+	"ignorePatterns": ["vite.config.ts"],
+	"rules": {
+		"@typescript-eslint/no-floating-promises": ["off"],
+		"@typescript-eslint/no-unsafe-assignment": ["off"],
+		"@typescript-eslint/restrict-template-expressions": ["off"],
+		"import/no-unresolved": ["off"],
+		"react/prop-types": ["off"],
+		"linebreak-style": "off",
+		"prettier/prettier": ["error"],
+		"@typescript-eslint/no-explicit-any": "warn",
+		"@typescript-eslint/ban-types": [
+			"error",
+			{
+				"extendDefaults": true,
+				"types": {
+					"{}": false
+				}
+			}
+		],
+		"vitest/max-nested-describe": [
+			"error",
+			{
+				"max": 3
+			}
+		],
+		"react-hooks/exhaustive-deps": "off",
+		"object-shorthand": "error",
+		"no-console": "warn"
+	}
+}

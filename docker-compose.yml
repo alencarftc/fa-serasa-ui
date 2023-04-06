@@ -1,0 +1,23 @@
+version: "3"
+
+services:
+  backend:
+    build: ./api 
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+    networks:
+      - serasa_network
+
+  frontend:
+    build: . 
+    ports:
+      - "1234:80"
+    networks:
+      - serasa_network
+
+
+networks:
+  serasa_network:
+    driver: bridge

@@ -1,0 +1,50 @@
+@forward '@sass/main';
+@use '@sass/main' as *;
+
+:root {
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-text-size-adjust: 100%;
+
+	// Element colors
+	--color-black: #{$theme-color-black};
+	--color-main: #{darken($theme-color-accent, 10%)};
+	--color-heading: #{$theme-color-dark-high};
+	--color-text: #{$theme-color-dark-medium};
+	--color-input: #{$theme-color-dark-high};
+	--color-label: #{$theme-color-dark-high};
+	--color-star: #{$theme-color-dark-low};
+	--color-star-hover: #{lighten($theme-color-orange, 10%)};
+	--color-star-active: #{$theme-color-orange};
+	--color-accent: #{$theme-color-accent};
+	--color-spinner: #{$theme-color-orange};
+	--color-placeholder: #{darken($theme-color-white, 25%)};
+
+	--color-error: #{darken($theme-color-red-light, 10%)};
+	--color-error-light: #{#{transparentize($theme-color-red-light, 0.15)}};
+	--color-error-text: #{darken($theme-color-red-light, 65%)};
+
+	--color-loading: #{darken($theme-color-yellow-light, 10%)};
+	--color-loading-light: #{transparentize($theme-color-yellow-light, 0.15)};
+	--color-loading-text: #{darken($theme-color-yellow-light, 65%)};
+
+	--color-success: #{darken($theme-color-green-light, 10%)};
+	--color-success-light: #{transparentize($theme-color-green-light, 0.15)};
+	--color-success-text: #{darken($theme-color-green-light, 65%)};
+
+	--color-primary-button: #{$theme-color-accent};
+	--color-primary-btn-disabled: #{grayscale($theme-color-accent)};
+	--color-primary-btn-disabled-hover: #{lighten(
+			grayscale($theme-color-accent),
+			10%
+		)};
+	--color-primary-btn-hover: #{darken($theme-color-accent, 10%)};
+
+	// Fonts
+	--theme-ff-heading: #{$theme-ff-general};
+	--theme-ff-text: #{$theme-ff-general};
+
+	--form-width: 16rem;
+}
