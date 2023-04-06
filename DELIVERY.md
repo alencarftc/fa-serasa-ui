@@ -40,11 +40,11 @@ Na sua arquitetura proposta precisa levar em consideração alguns problemas e d
 
 ### Explicação
 
-Por manter um ecossistema javascript, a combinação de Next.js e NestJS permite que os desenvolvedores trabalhem em um ambiente unificado e consistente com TypeScript em ambos os lados, reduzindo a curva de aprendizado e facilitando a colaboração, além de estar sob as mesmas ferramentas de linting (ESLint e Prettier), que ajudam bastante a manter um estilo de código consistente e a evitar erros comuns.
+Por manter um ecossistema javascript, a combinação de Next.js e NestJS permite que desenvolvedores trabalhem em um ambiente unificado e consistente com TypeScript em ambos os lados, reduzindo a curva de aprendizado e facilitando a colaboração, além de estar sob as mesmas ferramentas de linting (ESLint e Prettier), que ajudam bastante a manter um estilo de código consistente e a evitar erros comuns.
 
 Além disso, com uma estrutura de monorepo, o gerenciamento de dependências e o compartilhamento de código entre projetos se torna mais fácil pra se encontrar e reutilizar componentes e funções comuns, aumentando o reuso de código, duplicação e melhorando a manutenção também, e até mesmo a escrita de testes com Jest/Vitest e React-testing-library, promovendo maior confiabilidade e garantindo a qualidade do que já foi desenvolvido.
 
-Sobre a estilização, acredito que fazendo uma combinação entre CSS Modules com SCSS e metodologias BEM e OOCSS, é possível ter um ambiente sem conflitos de CSS, com uma organização clara, modular e de fácil manutenção.
+Sobre a estilização, acredito que fazendo uma combinação entre CSS Modules com SCSS e metodologias BEM e OOCSS, é possível ter um ambiente sem conflitos de CSS, com uma organização clara, modular e de fácil manutenção. Também seria crucial ter uma biblioteca de UI com o design system completo da Serasa, e para isso, utilizaria o Rollup como bundler, para que após isso, fosse feita a publicação em um NPM Registry.
 
 E pra documentar, o Storybook é uma ferramenta muito potente, que sendo combinada com JSDocs, standard-version e lintstaged, é possível aumentar o detalhamento dos componentes e suas propriedades, além de automatizar a escrita do CHANGELOG, que é o documento que centraliza de forma clara as mudanças realizadas entre cada versionamento do sistema através dos commits realizados.
 

@@ -34,9 +34,12 @@ const ModalProvider = ({
 	};
 
 	useEffect(() => {
-		const timeout = setTimeout(() => {
-			setConfigType('default');
-		}, 3000);
+		const timeout = setTimeout(
+			() => {
+				setConfigType('default');
+			},
+			configType === 'loading' ? 1000 * 90 : 3000
+		);
 
 		return () => clearTimeout(timeout);
 	}, [configType]);
