@@ -1,4 +1,7 @@
+$breakpoint_mobile: 480px;
+$breakpoint_desktop: 1024px;
+
 $breakpoints: (
-	mobile: 480px,
-	desktop: 1024px,
+	mobile: $breakpoint_mobile,
+	desktop: $breakpoint_desktop,
 );

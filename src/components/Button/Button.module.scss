@@ -1,0 +1,24 @@
+.button {   
+    background: var(--color-primary-button);
+    color: #FFF;
+    border-radius: 4px;
+    padding: 16px;
+    border: none;
+    width: 100%;
+    font-weight: 700;
+    font-family: var(--theme-ff-text);
+    font-size: 18px;
+    text-transform: uppercase;
+    transition: background 120ms ease;
+
+    &:disabled {
+        background: var(--color-primary-btn-disabled);
+
+        &:hover {
+            background: var(--color-primary-btn-disabled-hover);
+        }
+    }
+    &:hover {
+        background: var(--color-primary-btn-hover)
+    }
+}

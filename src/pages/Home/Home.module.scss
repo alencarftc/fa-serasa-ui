@@ -1,0 +1,20 @@
+.rating {
+	text-align: center;
+	padding: 48px;
+	max-width: 588px;
+	height: 100%;
+	width: 100%;
+	background: #fff;
+	border-radius: 16px;
+	margin: auto;
+	position: relative;
+
+	&__img {
+		max-width: 12rem;
+		width: 100%;
+	}
+
+	h4 {
+		margin-bottom: 0;
+	}
+}

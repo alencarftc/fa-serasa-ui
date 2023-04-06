@@ -1,0 +1,10 @@
+node_modules
+.lintstaged*
+.commitlint*
+.versionrc*
+.eslint*
+CHANGELOG.md
+DELIVERY.md
+README.md
+materiais
+dist

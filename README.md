@@ -1,19 +1,71 @@
-# Desafio 1 - Tipografia
+# Projeto React + Vite + TypeScript
 
-## Sobre o desafio
+Formulário de coleta de feedback utilizando o Serasa Design System.
 
-Estamos realizando a construção de um Design System para a empresa e cada desenvolvedor tem responsabilidade e influência durante a criação de suas regras e componentes, sendo assim, o trabalho é compartilhado com UI.
+### Tecnologias utilizadas
 
-## Objetivo do exercício
+- **Base**: React (Vite + Typescript)
+- **Style**: SASS modules (BEM)
+- **Tests**: Vitest w/ react-testing-library (w/ Istanbul coverage support)
+- **Linter**: ESLint + Prettier + commitlint + lintstaged
+- **Docs**: Storybook + JSDocs + standard-version (CHANGELOG.md auto-generator)
+- **Package Manager**: Yarn
+- **Bônus**: Docker, Axios, Husky, Nginx, NodeJS
 
-Componentização, documentação e boas práticas.
+### Inicialização Rápida com Docker
 
-## Sobre o exercício
+Execute o seguinte script para inicializar o projeto rapidamente:
 
-Você deverá componentizar a nossa tipografia visando a aplicação do(s) componentes, manutenção e evolução. Na pasta **[materiais](./materiais)** contém o visual e as regras. No final do exercício, você deve entregar uma pequena documentação de como utilizar o(s) componente(s).
+```
+docker-compose build --parallel && docker-compose up --remove-orphans
+```
 
-### Lembretes importantes
+### Scripts disponíveis
 
-- Você tem total liberdade para adotar a tecnologia que desejar, desde que atenda os requisitos do exercício.
-- Performance no carregamento da página é um fator importante e será levado em consideração na avaliação do teste.
-- Os componentes desenvolvidos devem ser reutilizados no [Exercício 2](../2-EXERCISE)**
+Neste projeto, você pode executar os seguintes scripts:
+
+#### Principais
+
+`yarn dev`\
+Inicia o servidor de desenvolvimento Vite. Abra http://localhost:3000 para visualizar no navegador.
+
+`yarn coverage`\
+Gera o relatório de cobertura de código com Vitest.
+
+`yarn storybook`\
+Inicia o servidor do Storybook na porta 6006.
+
+#### Outros
+
+`yarn test`\
+Executa os testes com Vitest.
+
+`yarn build`\
+Compila o projeto TypeScript e realiza o build para produção utilizando o Vite.
+
+`yarn preview`\
+Inicia o servidor Vite para visualizar a versão de produção do projeto.
+
+`yarn prepare`\
+Instala os hooks do Husky.
+
+`yarn lint`\
+Verifica o código com o TypeScript e o ESLint.
+
+`yarn prettier:write`\
+Formata o código utilizando Prettier.
+
+`yarn release`\
+Cria uma nova versão do projeto utilizando Standard Version.
+
+`yarn release:minor`\
+Cria uma nova versão minor do projeto utilizando Standard Version.
+
+`yarn release:patch`\
+Cria uma nova versão patch do projeto utilizando Standard Version.
+
+`yarn release:major`\
+Cria uma nova versão major do projeto utilizando Standard Version.
+
+`yarn build-storybook`\
+Realiza o build do Storybook para produção.

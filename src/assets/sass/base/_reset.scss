@@ -1,6 +1,28 @@
 html {
 	box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+body {
 	margin: 0;
 	padding: 0;
 	outline: 0;
+	font-size: 100%;
+	line-height: 1;
+}
+ol,
+ul {
+	list-style: none;
+}
+button {
+	cursor: pointer;
+}
+input,
+textarea {
+	&::placeholder {
+		color: var(--color-placeholder);
+	}
 }
