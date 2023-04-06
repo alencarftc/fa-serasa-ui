@@ -1,8 +1,8 @@
 /* eslint-disable vitest/expect-expect */
-import Paragraph from '@components/Paragraph';
+import Paragraph from '.';
 import { render, screen } from '@testing-library/react';
 
-describe('Heading component', () => {
+describe('Paragraph component', () => {
 	const testId = 'paragraph';
 	const TEST_LABEL = 'A simple default paragraph.';
 
@@ -23,7 +23,7 @@ describe('Heading component', () => {
 	});
 
 	it('should render a bold p', () => {
-		render(<Paragraph weight="bold">{TEST_LABEL}</Paragraph>);
+		render(<Paragraph fw="bold">{TEST_LABEL}</Paragraph>);
 		const el = screen.findByTestId(testId);
 		expect(el).toBeTruthy();
 	});
