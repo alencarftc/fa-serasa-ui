@@ -1,4 +1,4 @@
-# Projeto React + Vite + TypeScript
+# Desafio Serasa
 
 Formulário de coleta de feedback utilizando o Serasa Design System.
 
