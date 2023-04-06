@@ -20,7 +20,16 @@
 		"baseUrl": ".",
 		"paths": {
 			"@public/*": ["./public/*"],
-			"@components/*": ["./src/components/*"]
+			"@components/*": ["./src/components/*"],
+			"@interfaces/*": ["src/interfaces/*"],
+			"@helpers/*": ["./src/helpers/*"],
+			"@pages/*": ["./src/pages/*"],
+			"@assets/*": ["./src/assets/*"],
+			"@images/*": ["./src/assets/images/*"],
+			"@fonts/*": ["./src/assets/fonts/*"],
+			"@sass/*": ["./src/assets/sass/*"],
+			"@configs/*": ["./src/configs/*"],
+			"@services/*": ["./src/services/*"]
 		}
 	},
 	"include": ["src"],

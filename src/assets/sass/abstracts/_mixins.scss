@@ -1,5 +1,17 @@
 @use '@sass/abstracts/breakpoints' as bk;
 
+@mixin font-face($name, $path, $weight: normal, $style: null, $exts: woff) {
+	$src: null;
+
+	@font-face {
+		font-family: quote($name);
+		font-style: $style;
+		font-display: swap;
+		font-weight: $weight;
+		src: url('@fonts/#{$path}.woff') format('woff');
+	}
+}
+
 @mixin font-config($fs-map, $fs-breakpoints: bk.$breakpoints) {
 	@each $fs-breakpoint, $fs-font-config in $fs-map {
 		@if $fs-breakpoint == null {
@@ -20,13 +32,10 @@
 // Utility function for mixin font configuration
 @mixin make-font-config($fs-font-config) {
 	font-size: nth($fs-font-config, 1);
-	@if ( length($fs-font-config) > 1 ) {
-		line-height: nth($fs-font-config, 2)
+	@if (length($fs-font-config) > 1) {
+		line-height: nth($fs-font-config, 2);
 	}
-	@if ( length($fs-font-config) > 2 ) {
-		font-weight: nth($fs-font-config, 3);
-	}
-	@if ( length($fs-font-config) > 3 ) {
-		letter-spacing: nth($fs-font-config, 4);
+	@if (length($fs-font-config) > 2) {
+		letter-spacing: nth($fs-font-config, 3);
 	}
 }

@@ -1,0 +1,41 @@
+// Theme-colors
+$theme-color-magenta: #e63888;
+$theme-color-black: #000000;
+$theme-color-white: #ffffff;
+$theme-color-red: #d6103b;
+$theme-color-green: #00af7d;
+$theme-color-orange: #ff8f1c;
+$theme-color-red-light: #ff9ea1;
+$theme-color-green-light: #9effa5;
+$theme-color-yellow-light: #ffed99;
+
+$theme-color-dark-low: #{rgba($theme-color-black, 0.4)};
+$theme-color-dark-medium: #{rgba($theme-color-black, 0.6)};
+$theme-color-dark-high: #{rgba($theme-color-black, 0.8)};
+$theme-color-light-high: #{rgba($theme-color-white, 0.8)};
+$theme-color-light-solid: $theme-color-white;
+$theme-color-accent: $theme-color-magenta;
+
+// Letter spacing values
+$theme-ls-sm: -0.6px;
+$theme-ls-md: -0.8px;
+$theme-ls-lg: -1px;
+$theme-ls-xl: -1.2px;
+
+// Font size values
+$theme-fs-xxl: 3rem;
+$theme-fs-xl: 2.5rem;
+$theme-fs-lg: 2rem;
+$theme-fs-md: 1.5rem;
+$theme-fs-sm: 1.25rem;
+$theme-fs-xs: 1.125rem;
+$theme-fs-xxs: 1rem;
+
+// Line height values
+$theme-lh-xxl: 52px;
+$theme-lh-xl: 44px;
+$theme-lh-lg: 36px;
+$theme-lh-md: 28px;
+$theme-lh-sm: 24px;
+$theme-lh-xs: 22px;
+$theme-lh-xxs: 20px;

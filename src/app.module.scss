@@ -1,18 +1,10 @@
-.logo {
-	height: 6em;
-	padding: 1.5em;
-}
-.logo:hover {
-	filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-	filter: drop-shadow(0 0 2em hsla(261, 52%, 47%, 0.667));
-}
+@use '@sass/abstracts/mixins' as mx;
+@use '@sass/themes/variables' as th;
 
-.card {
-	padding: 2em;
-}
-
-.read-the-docs {
-	color: #888;
+.wrapper {
+	background: var(--color-main);
+	width: 100%;
+	min-height: 100vh;
+	display: flex;
+	padding: 24px;
 }
