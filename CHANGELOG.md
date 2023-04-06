@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.3.0](https://github.com/alencarftc/serasa-ui/compare/v0.2.0...v0.3.0) (2023-04-06)
+
+
+### Features
+
+* add components ([53fe14f](https://github.com/alencarftc/serasa-ui/commits/53fe14fa27e179e807bc437d57ae8e977080235c))
+* add docker config and last adjustments ([dae74d4](https://github.com/alencarftc/serasa-ui/commits/dae74d441ba98976980ebdf236f2636027332ed0))
+* add helpers and services ([450e636](https://github.com/alencarftc/serasa-ui/commits/450e636131ee4ecbe6fe39e47cdceadbc46046a2))
+* add last story files and improve docs ([26c59aa](https://github.com/alencarftc/serasa-ui/commits/26c59aa66bcc09fa60feb1c192afcfc4f05f1107))
+* add page and last components ([a011378](https://github.com/alencarftc/serasa-ui/commits/a0113789eb0f0a8906fe223fe98b796e73e6cfd4))
+* add text components ([4dab300](https://github.com/alencarftc/serasa-ui/commits/4dab300a4fd1e310b1953432e571e707dbb780d9))
+* improve structure and styles ([0423506](https://github.com/alencarftc/serasa-ui/commits/0423506606586fd5a17fc781117c4d0e4d26d028))
+
 ## [0.2.0](https://github.com/alencarftc/serasa-ui/compare/v0.1.0...v0.2.0) (2023-04-03)
 
 
