@@ -7,7 +7,7 @@ describe('FeedbackModal', () => {
 	const renderModal = (configType: ModalConfigType) =>
 		render(
 			<ModalProvider initialConfigType={configType}>
-				<FeedbackModal />
+				<FeedbackModal id={configType}>Text</FeedbackModal>
 			</ModalProvider>
 		);
 

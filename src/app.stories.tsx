@@ -1,8 +1,11 @@
 import { App } from './app';
 
 export default {
-	title: 'App',
+	title: 'Pages/Main Page',
 	component: App,
+	parameters: {
+		layout: 'fullscreen',
+	},
 };
 
-export const AppExample = () => <App />;
+export const Default = () => <App />;

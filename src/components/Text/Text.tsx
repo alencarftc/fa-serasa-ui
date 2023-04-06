@@ -20,7 +20,7 @@ export type TextProps = {
 	PropsWithChildren;
 
 /**
- * A Simple component for showing text.
+ * Component for showing a text.
  */
 const Text = ({
 	children,

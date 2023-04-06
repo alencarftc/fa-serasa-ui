@@ -51,7 +51,6 @@ export default defineConfig({
 			provider: 'istanbul',
 			reporter: ['text', 'json', 'html'],
 			reportsDirectory: '.tests/coverage',
-			all: true,
 		},
 		mockReset: true,
 		restoreMocks: true,

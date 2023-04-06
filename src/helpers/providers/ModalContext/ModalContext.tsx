@@ -1,10 +1,16 @@
-import { createContext, useEffect, useMemo, useState } from 'react';
+import { createContext, memo, useEffect, useMemo, useState } from 'react';
 import { PropsWithChildren } from '@interfaces/shared';
 
 import { ModalConfigType } from '@components/FeedbackModal';
 
 export interface ModalContextProps {
+	/**
+	 * Modal config variants
+	 */
 	configType: ModalConfigType;
+	/**
+	 * Function for changing the modal config variant
+	 */
 	change: (configType: ModalConfigType) => void;
 }
 export const ModalContext = createContext<ModalContextProps>({
@@ -48,4 +54,4 @@ const ModalProvider = ({
 	);
 };
 
-export default ModalProvider;
+export default memo(ModalProvider);

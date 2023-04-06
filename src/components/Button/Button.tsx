@@ -10,18 +10,25 @@ export interface SubmitButtonProps extends PropsWithChildren {
 	 * Is button disabled?
 	 */
 	disabled?: boolean;
+	/**
+	 * Callback handler for click events
+	 */
+	onClick?: () => void;
 }
-const Button = ({ type, disabled }: SubmitButtonProps) => {
-	return (
-		<button
-			data-testid="button"
-			className={classes.button}
-			type={type}
-			disabled={disabled}
-		>
-			Enviar avaliação
-		</button>
-	);
-};
+
+/**
+ * Component for showing a button.
+ */
+const Button = ({ type, onClick, disabled = false }: SubmitButtonProps) => (
+	<button
+		data-testid="button"
+		className={classes.button}
+		type={type}
+		onClick={onClick}
+		disabled={disabled}
+	>
+		Enviar avaliação
+	</button>
+);
 
 export default Button;

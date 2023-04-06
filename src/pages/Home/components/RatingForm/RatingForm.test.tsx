@@ -2,17 +2,15 @@ import { render, screen } from '@testing-library/react';
 import RatingForm from './RatingForm';
 
 describe('RatingForm component', () => {
+	const mockOnSubmit = vitest.fn();
+
 	vitest.mock('react-hook-form', () => ({
 		useForm: () => ({
-			control: () => ({}),
 			register: vitest.fn(),
-			watch: vitest.fn(),
-			formState: { errors: {} },
-			handleSubmit: () => vitest.fn(),
+			handleSubmit: vitest.fn(),
+			formState: { errors: vitest.fn() },
 		}),
 	}));
-
-	const mockOnSubmit = vitest.fn();
 
 	beforeEach(() => {
 		mockOnSubmit.mockClear();
@@ -43,5 +41,10 @@ describe('RatingForm component', () => {
 		const commentInput = screen.getByPlaceholderText('Experiência fantástica!');
 		expect(commentInput).toBeInTheDocument();
 		expect(commentInput.tagName).toBe('TEXTAREA');
+	});
+
+	it('renders correctly', () => {
+		render(<RatingForm onSubmit={mockOnSubmit} />);
+		expect(screen.getByText('Enviar avaliação')).toBeInTheDocument();
 	});
 });

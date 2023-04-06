@@ -1,4 +1,4 @@
-import { FC, memo, useState } from 'react';
+import { useState } from 'react';
 
 import classes from './StarList.module.scss';
 import { StyleHelper } from '@helpers/sass';
@@ -7,18 +7,18 @@ import Text from '@components/Text';
 
 export type FeedbackValue = 1 | 2 | 3 | 4 | 5;
 
-interface StarListProps extends ReactHookFormInputProps {
-	/**
-	 * The selected star.
-	 */
-	selected: FeedbackValue | null;
-}
+type StarListProps = ReactHookFormInputProps;
 
-const StarList: FC<StarListProps> = ({ errors, register, selected }) => {
+/**
+ * Component for asking the user for rating something.
+ */
+const StarList = ({ errors, register }: StarListProps) => {
 	const [hovered, setHovered] = useState<FeedbackValue | null>(null);
+	const [selected, setSelected] = useState<FeedbackValue | null>(null);
 
-	const handleStarLeave = () => setHovered(null);
-	const handleStarEnter = (value: FeedbackValue) => setHovered(value);
+	const handleOnStarClick = (value: FeedbackValue) => setSelected(value);
+	const handleOnStarLeave = () => setHovered(null);
+	const handleOnStarEnter = (value: FeedbackValue) => setHovered(value);
 
 	const getStarClassName = (value: FeedbackValue) =>
 		StyleHelper.classnames(
@@ -53,8 +53,9 @@ const StarList: FC<StarListProps> = ({ errors, register, selected }) => {
 								role="button"
 								data-testid={`star-${value}`}
 								className={getFullClassName(value as FeedbackValue)}
-								onMouseEnter={() => handleStarEnter(value as FeedbackValue)}
-								onMouseLeave={() => handleStarLeave()}
+								onMouseEnter={() => handleOnStarEnter(value as FeedbackValue)}
+								onClick={() => handleOnStarClick(value as FeedbackValue)}
+								onMouseLeave={() => handleOnStarLeave()}
 								aria-label={`Selecionar ${value} estrelas`}
 								htmlFor={id}
 							>
@@ -71,4 +72,4 @@ const StarList: FC<StarListProps> = ({ errors, register, selected }) => {
 	);
 };
 
-export default memo(StarList);
+export default StarList;

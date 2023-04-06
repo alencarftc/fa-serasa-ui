@@ -1,5 +1,6 @@
 .modal {
 	&--default {
+		z-index: -1;
 		animation: fadeDown 750ms ease-in-out;
 	}
 
@@ -15,6 +16,10 @@
 	&--loading span {
 		justify-content: space-between;
 	}
+
+	span {
+		max-width: 480px;
+	}
 }
 @keyframes fadeUp {
 	0% {
@@ -26,8 +31,5 @@
 	0% {
 		transform: translate(-50%, -50%);
 		opacity: 1;
-	}
-	100% {
-		// opacity: 0;
 	}
 }

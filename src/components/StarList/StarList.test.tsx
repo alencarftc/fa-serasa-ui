@@ -8,7 +8,6 @@ describe('StarList component with React Hook Form', () => {
 	const Wrapper = () => {
 		const {
 			register,
-			watch,
 			setError,
 			formState: { errors },
 		} = useForm<{
@@ -27,7 +26,6 @@ describe('StarList component with React Hook Form', () => {
 					required: errorLabel,
 				})}
 				errors={errors.rating}
-				selected={watch('rating')}
 			/>
 		);
 	};

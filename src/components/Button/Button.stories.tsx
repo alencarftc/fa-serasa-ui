@@ -3,7 +3,7 @@ import Button from '.';
 import type { Meta, StoryObj } from '@storybook/react';
 
 const meta = {
-	title: 'Design System/Button',
+	title: 'Components/Buttons/Button',
 	tags: ['autodocs'],
 	component: Button,
 	args: {
@@ -19,5 +19,6 @@ export const Default: Story = {};
 export const Disabled: Story = {
 	args: {
 		children: 'Bold body Button',
+		disabled: true,
 	},
 };

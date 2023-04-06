@@ -22,15 +22,15 @@
 	--color-spinner: #{$theme-color-orange};
 	--color-placeholder: #{darken($theme-color-white, 25%)};
 
-	--color-error: #{$theme-color-red-light};
+	--color-error: #{darken($theme-color-red-light, 10%)};
 	--color-error-light: #{#{transparentize($theme-color-red-light, 0.15)}};
 	--color-error-text: #{darken($theme-color-red-light, 65%)};
 
-	--color-loading: #{$theme-color-yellow-light};
+	--color-loading: #{darken($theme-color-yellow-light, 10%)};
 	--color-loading-light: #{transparentize($theme-color-yellow-light, 0.15)};
 	--color-loading-text: #{darken($theme-color-yellow-light, 65%)};
 
-	--color-success: #{$theme-color-green-light};
+	--color-success: #{darken($theme-color-green-light, 10%)};
 	--color-success-light: #{transparentize($theme-color-green-light, 0.15)};
 	--color-success-text: #{darken($theme-color-green-light, 65%)};
 

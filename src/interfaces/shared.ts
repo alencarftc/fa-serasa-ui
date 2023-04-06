@@ -40,7 +40,7 @@ export type ReactHookFormInputProps = {
 	 */
 	register?: UseFormRegisterReturn;
 	/**
-	 * Validations correspondent errors.
+	 * Error validations.
 	 */
 	errors?: FieldError | undefined;
 };

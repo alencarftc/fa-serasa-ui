@@ -5,6 +5,10 @@ import classes from './Modal.module.scss';
 import { PropsWithChildren, PropsWithClassName } from '@interfaces/shared';
 
 type ModalProps = PropsWithChildren & PropsWithClassName;
+
+/**
+ * Component for showing a floating text.
+ */
 const Modal = ({ children, className }: ModalProps) => (
 	<div
 		data-testid="modal"

@@ -8,6 +8,9 @@ export type TextInputProps = CommonInputProps &
 		as?: 'text' | 'textarea';
 	};
 
+/**
+ * Component for asking the user for inputing text
+ */
 const TextInput = ({
 	label,
 	name,

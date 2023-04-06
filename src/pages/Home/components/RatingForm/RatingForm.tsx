@@ -6,7 +6,12 @@ import StarList, { FeedbackValue } from '@components/StarList';
 import Button from '@components/Button';
 
 import classes from './RatingForm.module.scss';
-import FeedbackModal from '@components/FeedbackModal';
+import FeedbackModal, {
+	MODAL_CONFIGS,
+	ModalConfig,
+} from '@components/FeedbackModal';
+import { useContext, useEffect, useState } from 'react';
+import { ModalContext } from '@helpers/providers/ModalContext';
 
 export interface RatingFormValues {
 	rating: FeedbackValue;
@@ -18,13 +23,23 @@ interface RatingFormProps {
 	onSubmit: (data: RatingFormValues) => void;
 }
 
+/**
+ * Component for showing a form for collecting the user feedback.
+ */
 const RatingForm = ({ onSubmit }: RatingFormProps) => {
 	const {
 		register,
 		handleSubmit,
-		watch,
 		formState: { errors, isValid },
 	} = useForm<RatingFormValues>({ mode: 'onTouched' });
+	const { configType } = useContext(ModalContext);
+	const [{ id, children: message }, setModalConfig] = useState<ModalConfig>(
+		MODAL_CONFIGS.default
+	);
+
+	useEffect(() => {
+		setModalConfig(MODAL_CONFIGS[configType]);
+	}, [configType]);
 
 	return (
 		<>
@@ -35,7 +50,6 @@ const RatingForm = ({ onSubmit }: RatingFormProps) => {
 			>
 				<StarList
 					errors={errors.rating}
-					selected={watch('rating')}
 					register={register('rating', {
 						min: 1,
 						max: 5,
@@ -61,7 +75,7 @@ const RatingForm = ({ onSubmit }: RatingFormProps) => {
 					Enviar avaliação
 				</Button>
 			</form>
-			<FeedbackModal />
+			<FeedbackModal id={id}>{message}</FeedbackModal>
 		</>
 	);
 };
